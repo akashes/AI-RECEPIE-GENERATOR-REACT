@@ -3,7 +3,7 @@ import { ToastContainer, toast } from 'react-toastify';
 
 
 const Form = ({setIngredients,ingredients}) => {
-    const[ing,setIng]=useState('')
+    const[ing,setIng]=useState([])
 
     const addIng=(e)=>{
 
@@ -21,7 +21,7 @@ const Form = ({setIngredients,ingredients}) => {
      }
 
       setIngredients([...ingredients,ing])
-      setIng('')
+      setIng([])
     }
 
     

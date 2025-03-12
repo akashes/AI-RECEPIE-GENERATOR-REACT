@@ -8,6 +8,7 @@ import { useRef } from 'react';
 import GetRecepie from './GetRecepie';
 import { getRecipeFromMistral } from '../utils/ai.js';
 const Main = () => {
+
   const [ingredients,setIngredients]=useState([])
   const[result,setResult]=useState('')
   const[fetching,setFetching]=useState(false)
@@ -16,24 +17,11 @@ const Main = () => {
 
 
   const handleDelete=(i)=>{
-    setIngredients(ingredients.filter(ing=>ing!==i))
+    setIngredients(prevIngredients=>prevIngredients.filter(ing=>ing!=i))
   }
   const generateRecepie=async()=>{
     setFetching(true)
-    // let ingList=''
-    // ingredients.map((i,index)=>{
-
-    //   ingList+=i+','})
-    // const requestString = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingList.slice(0,-1)}&apiKey=${apiKey}`
-    // const res = await fetch(requestString)
-    // if(!res.ok){
-    //   toast.error('no recepie found')
-    //   return
-    // }
-    // const data = await res.json()
-    // console.log(data)
-    // setRecipies(data)
-    console.log('inside')
+  
    const res = await getRecipeFromMistral(ingredients)
    console.log(res)
    setResult(res)

@@ -1,68 +1,10 @@
-// import React from 'react'
-// import { BiLike } from "react-icons/bi";
-
-
-// const Recepie = ({recepie}) => {
-//   return (
-//     // <section>
-//     //   <h2>Chef Calude Recommends:</h2>
-//     //   <article aria-live='polite'>
-
-//     //     <p>Based on the ingredients you have  , I would recommend delicious <strong>Beef bolongesne</strong>
-        
-//     //     Here is the recipie 
-//     //     </p>
-//     //     <h3>Beef bonoggese</h3>
-//     //     <strong>
-//     //         Ingredients:
-//     //         <ul>
-//     //             <li>dkfalsd</li>
-//     //             <li>dkfalsd</li>
-//     //             <li>dkfalsd</li>
-//     //             <li>dkfalsd</li>
-//     //             <li>dkfalsd</li>
-//     //         </ul>
-//     //         <strong>
-//     //             Instructions:
-//     //         </strong>
-//     //         <ol>
-//     //             <li>bring a large pot</li>
-//     //             <li>bring a large pot</li>
-//     //             <li>bring a large pot</li>
-//     //             <li>bring a large pot</li>
-//     //             <li>bring a large pot</li>
-//     //         </ol>
-//     //     </strong>
-//     //   </article>
-//     // </section>
-//     <div className="flex flex-col items-center bg-white shadow-lg p-6 m-4 min-h-[500px] w-80">
-//       <img src={recepie.image} alt="" className="max-w-[200px] rounded-sm" />
-//       <h4 className="text-lg uppercase mt-4">{recepie.title}</h4>
-
-//       {/* <p className="mb-2 text-gray-700">{text1}</p>
-//       <p className="mb-2 text-gray-700">{text2}</p> */}
-//       <div>
-//         <BiLike/> {recepie.likes} likes
-//       <h3 className='font-bold'>Unused Ingredient</h3>
-//         {
-//             recepie?.unusedIngredients?.map(ing=>(
-//                <p>{ing.original}</p>
-//             ))
-//         }
-//       </div>
-
-//       <a href="#" className="mt-auto text-blue-500 hover:underline">Read More</a>
-//     </div>
-//   )
-// }
-
-// export default Recepie
 
 
 import React, { forwardRef } from 'react'
 import { MdCancel } from 'react-icons/md'
 import ReactMarkdown from 'react-markdown'
-
+//needed to pass ref in here to parent , so forward ref is used
+//react markdown to format markdown result got from the api
 const Recepie = forwardRef((props,ref) => {
   return (
 <>
