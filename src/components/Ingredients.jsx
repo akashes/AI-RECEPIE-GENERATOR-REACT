@@ -5,7 +5,7 @@ import { MdCancel } from 'react-icons/md'
 const Ingredients = ({ingredients,handleDelete}) => {
   return (
     <>
-       <div className='sm:min-h-[300px] md:min-h-[400px] lg:min-h-[500px] xl:min-h-[500px] ' >
+       <div className='sm:min-h-[300px] md:min-h-[400px] ' >
         <h1 className='font-semibold px-8 sm:px-16 md:px-30 lg:px-50 text-2xl mt-12 mb-4 ' >Ingredients on hand: <span className='text-sm font-light text-gray-600 '>(min 4) </span> </h1>
         <ul className='flex flex-col  justify-center flex-start px-4 sm:px-16 md:px-30 lg:px-50   '>
            {
